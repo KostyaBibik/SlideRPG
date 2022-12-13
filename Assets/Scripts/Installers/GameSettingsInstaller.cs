@@ -9,10 +9,12 @@ namespace Installers
     public class GameSettingsInstaller : ScriptableObjectInstaller<GameSettingsInstaller>
     {
         [SerializeField] private PlayerConfigSettings playerSettings;
-        
+        [SerializeField] private EnemyConfigSettings enemyConfigSettings;
+
         public override void InstallBindings()
         {
             Container.BindInstance(playerSettings);
+            Container.BindInstance(enemyConfigSettings);
         }
     }
 }

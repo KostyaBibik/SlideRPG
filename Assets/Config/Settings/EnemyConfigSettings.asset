@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c8c0ffb6624d58b2ec3c018d446084, type: 3}
-  m_Name: GameSettingsInstaller
+  m_Script: {fileID: 11500000, guid: 64032e32846a48b5afafd0030be9a5e9, type: 3}
+  m_Name: EnemyConfigSettings
   m_EditorClassIdentifier: 
-  playerSettings: {fileID: 11400000, guid: 672caf5d495193c4c9d23ef521067d29, type: 2}
-  enemyConfigSettings: {fileID: 11400000, guid: 157a676fcd159fa459761d8f0d42e2ad,
-    type: 2}
+  speedMoving: 2.5
+  attack: 5
+  health: 10
+  attackSpeed: 1
+  raiseHealth: 1
+  raiseAttackDamage: 0

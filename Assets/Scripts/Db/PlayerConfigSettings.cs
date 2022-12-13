@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Views;
 
 namespace Db
 {
@@ -7,8 +6,14 @@ namespace Db
         fileName = nameof(PlayerConfigSettings))]
     public class PlayerConfigSettings : ScriptableObject
     {
-        [SerializeField] private PlayerView playerView;
-
-        public PlayerView PlayerView => playerView;
+        [SerializeField] private int attack;
+        [SerializeField] private int health;
+        [SerializeField] private float attackSpeed;
+        [SerializeField] private float speedMovingBullet;
+        
+        public int Attack => attack;
+        public int Health => health;
+        public float AttackSpeed => attackSpeed;
+        public float SpeedMovingBullet => speedMovingBullet;
     }
 }

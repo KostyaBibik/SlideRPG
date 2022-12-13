@@ -6,9 +6,9 @@ namespace Systems.Factory.Impl
 {
     public class GameFactory : IEntityFactory
     {
-        private readonly DiContainer _container;
-        private readonly IPrefabService _prefabService;
-
+        [Inject] private readonly DiContainer _container;
+        [Inject] private readonly IPrefabService _prefabService;
+        
         public GameFactory(
             DiContainer container,
             IPrefabService prefabService
@@ -37,9 +37,8 @@ namespace Systems.Factory.Impl
 
         public T CreateForComponent<T>(string name)
         {
-            var prefab = _prefabService.GetPrefabData(name);
-            var component = _container.InstantiatePrefabForComponent<T>(prefab.prefab);
-            _container.Bind<T>().FromInstance(component).NonLazy();
+            var prefabData = _prefabService.GetPrefabData(name);
+            var component = _container.InstantiatePrefabForComponent<T>(prefabData.prefab);
 
             return component;
         }

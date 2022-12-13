@@ -18,3 +18,12 @@ MonoBehaviour:
   - name: Floor
     prefab: {fileID: 8962115117933652095, guid: 86a8617b78916c94ca58a376b3c33352,
       type: 3}
+  - name: Chunk
+    prefab: {fileID: 8825432474351500371, guid: d548cc665b159174ba00ec03aa572fbf,
+      type: 3}
+  - name: Enemy
+    prefab: {fileID: 1875285600225583542, guid: e0b14b5a4b35060408fb198b675a0889,
+      type: 3}
+  - name: Bullet
+    prefab: {fileID: 5508196613475384682, guid: dd63b9e321039704ba00e793406fcca0,
+      type: 3}

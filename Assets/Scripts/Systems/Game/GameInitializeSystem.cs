@@ -15,6 +15,9 @@ namespace Systems.Game
         public void Initialize()
         {
             _signalBus.Fire(new InitializePlayerSignal());
+            _signalBus.Fire(new ChunkSpawnSignal());
+            _signalBus.Fire(new StartMoveSignal());
+            _signalBus.Fire(new SpawnEnemySignal());
         }
     }
 }
