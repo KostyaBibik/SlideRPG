@@ -15,3 +15,5 @@ MonoBehaviour:
   playerSettings: {fileID: 11400000, guid: 672caf5d495193c4c9d23ef521067d29, type: 2}
   enemyConfigSettings: {fileID: 11400000, guid: 157a676fcd159fa459761d8f0d42e2ad,
     type: 2}
+  progressConfigSettings: {fileID: 11400000, guid: 8ac948d13b3d5ac4a8178059dfa8187b,
+    type: 2}

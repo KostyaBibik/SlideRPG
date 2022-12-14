@@ -10,11 +10,13 @@ namespace Installers
     {
         [SerializeField] private PlayerConfigSettings playerSettings;
         [SerializeField] private EnemyConfigSettings enemyConfigSettings;
+        [SerializeField] private ProgressConfigSettings progressConfigSettings;
 
         public override void InstallBindings()
         {
             Container.BindInstance(playerSettings);
             Container.BindInstance(enemyConfigSettings);
+            Container.BindInstance(progressConfigSettings);
         }
     }
 }

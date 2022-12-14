@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64032e32846a48b5afafd0030be9a5e9, type: 3}
-  m_Name: EnemyConfigSettings
+  m_Script: {fileID: 11500000, guid: 95fa707140cf4f16b8349ccdde3addae, type: 3}
+  m_Name: ProgressConfigSettings
   m_EditorClassIdentifier: 
-  speedMoving: 2.5
-  attack: 5
-  health: 30
-  attackSpeed: 1
-  raiseHealth: 1
-  raiseAttackDamage: 1
+  playerAttack: 2
+  playerHealth: 2
+  playerAttackSpeed: 0.05
+  softValueOnKillEnemy: 5
