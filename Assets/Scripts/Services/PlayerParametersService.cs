@@ -34,7 +34,7 @@ namespace Services
             _health += raiseValue;
         }
         
-        public void RaiseAttackSpeed(int raiseValue)
+        public void RaiseAttackSpeed(float raiseValue)
         {
             _attackSpeed += raiseValue;
         }

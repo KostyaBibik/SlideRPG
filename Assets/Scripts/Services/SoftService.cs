@@ -11,6 +11,9 @@ namespace Services
         private readonly SignalBus _signalBus;
         private readonly ProgressConfigSettings _progressConfigSettings;
 
+        public int CurrentSoft => _softValue;
+        public event Action<int> onUpdateSoft;
+        
         public SoftService(
             SignalBus signalBus,
             ProgressConfigSettings progressConfigSettings
@@ -23,6 +26,7 @@ namespace Services
         public void AddSoft(int softValue)
         {
             _softValue += softValue;
+            onUpdateSoft?.Invoke(_softValue);
         }
 
         public bool TrySpendSoft(int spendValue)

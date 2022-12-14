@@ -6,12 +6,11 @@ namespace Services
     {
         private int _attackDamage;
         private int _health;
-        private int _currentHealth;
         private float _attackSpeed;
         private readonly float _speedMoving;
         
         public int AttackDamage => _attackDamage;
-        public int Health => _currentHealth;
+        public int Health => _health;
         public float AttackSpeed => _attackSpeed;
         public float SpeedMoving => _speedMoving;
         
@@ -21,7 +20,6 @@ namespace Services
             _health = configSettings.Health;
             _attackSpeed = configSettings.AttackSpeed;
             _speedMoving = configSettings.SpeedMoving;
-            _currentHealth = _health;
         }
 
         public void RaiseAttackDamage(int raiseValue)

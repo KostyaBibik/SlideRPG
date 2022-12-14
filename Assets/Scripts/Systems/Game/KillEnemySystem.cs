@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using Services;
 using Signals;
+using UniRx;
+using UnityEngine;
 using Zenject;
 using Object = UnityEngine.Object;
 
@@ -36,6 +40,15 @@ namespace Systems.Game
             Object.Destroy(killEnemySignal.EnemyView.gameObject);
             
             _signalBus.Fire(new StartMoveSignal());
+
+            Observable.FromCoroutine(SpawnWithDelay)
+                .Subscribe();
+        }
+
+        private IEnumerator SpawnWithDelay()
+        {
+            yield return new WaitForSeconds(.1f);
+            
             _signalBus.Fire(new SpawnEnemySignal());
         }
     }

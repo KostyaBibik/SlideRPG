@@ -58,6 +58,11 @@ namespace Systems.Player
         {
             do
             {
+                if (!_isAttack)
+                {
+                    yield break;
+                }
+                
                 var bullet = _entityFactory.CreateForComponent<BulletView>("Bullet");
                 bullet.Initialize(_targetEnemy, _playerParameters.SpeedMovingBullet, _playerParameters.AttackDamage);
 
@@ -74,6 +79,8 @@ namespace Systems.Player
                 } while ( 1f/_playerParameters.AttackSpeed >= timeReload);
                 
             } while (_isAttack);
+
+            _isAttack = false;
         }
 
         private void OnKillPlayer(KillEnemySignal killEnemySignal)

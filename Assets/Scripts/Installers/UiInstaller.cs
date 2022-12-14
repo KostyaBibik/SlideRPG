@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Views.Ui;
 using Views.Ui.Impl;
 using Zenject;
 
@@ -9,6 +10,7 @@ namespace Installers
         [SerializeField] private AttackContainerView attackContainer;
         [SerializeField] private HealthContainerView healthContainer;
         [SerializeField] private AttackSpeedContainerView attackSpeedContainer;
+        [SerializeField] private PanelsHandler panelsHandler;
 
         public override void InstallBindings()
         {
